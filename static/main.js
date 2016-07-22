@@ -12,7 +12,12 @@ function build_ingredients(ingredients) {
 
 function build_description(descriptions) {
   descriptionDiv.innerHTML = "";
+  var many = descriptions.length > 1;
+
   descriptions.forEach(function(item, index) {
+    if(many) {
+      descriptionDiv.innerHTML += "<div class='description-index'>" + (index+1) + "</div>";
+    }
     descriptionDiv.innerHTML += "<div class='description-item'>" + item + "</div>";
   })
 }
@@ -25,12 +30,14 @@ function build_recipe (data) {
 }
 
 function fetch_data () {
+  outputDiv.style.display = 'none';
   loadingDiv.style.display = 'block';
 
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (xhttp.readyState == 4 && xhttp.status == 200) {
       loadingDiv.style.display = 'none';
+      outputDiv.style.display = 'block';
       build_recipe(JSON.parse(xhttp.responseText));
     }
   };

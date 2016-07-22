@@ -5,7 +5,7 @@ import subprocess
 
 app = Flask(__name__)
 
-fake_ingredients = ["100g kurczaka", "200g papryk", "50g piwa"]
+fake_ingredients = ["100g kurczaka", "200g papryk", "50g piwa","100g kurczaka", "200g papryk", "50g piwa","100g kurczaka", "200g papryk", "50g piwa"]
 fake_descriptions = ["Place the zucchini, bell pepper, and pineapple in a mixing bowl. Drizzle with olive oil, and toss to coat. Divide the mixture into freezer bags. Whisk the ketchup, salt, steak sauce, sugar, vinegar, Worcestershire sauce, and water together in the same bowl until smooth. Add the beef cubes, and toss until evenly coated. Divide the beef into freezer bags. Seal, and freeze the bags.", "Place the zucchini, bell pepper, and pineapple in a mixing bowl. Drizzle with olive oil, and toss to coat. Divide the mixture into freezer bags. Whisk the ketchup, salt, steak sauce, sugar, vinegar, Worcestershire sauce, and water together in the same bowl until smooth. Add the beef cubes, and toss until evenly coated. Divide the beef into freezer bags. Seal, and freeze the bags."]
 
 description = []
