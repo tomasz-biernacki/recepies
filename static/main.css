@@ -1,0 +1,37 @@
+body {
+    background-image: url("../static/splash-2.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color:#464646;
+    font-family: 'PT Sans', Helvetica, Verdana, Sans-Serif;
+    color: white;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+h1 {
+    font-variant: small-caps;
+    font-size: 4em;
+}
+
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.5em;
+    border-radius: 5px;
+    margin: auto auto;
+    cursor: hand;
+}
