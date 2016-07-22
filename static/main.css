@@ -14,13 +14,12 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 40px;
 }
 
 h1 {
     font-variant: small-caps;
     font-size: 4em;
-    color: #E9FF36;
+    color: #EEE;
 }
 
 .button {
@@ -39,4 +38,29 @@ h1 {
 
 .button:hover {
     background-color: #5EBF61;
+}
+
+#output {
+    width: 60%;
+    margin: 30px auto;
+}
+
+.ingredients-container {
+    display: flex;
+    wrap: wrap;
+    justify-content: center;
+    margin: 30px auto;
+}
+
+.description-item {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.ingredients-item {
+    background-color: white;
+    color: #222;
+    padding: 10px;
+    border-radius: 50px;
+    margin: 20px;
 }
