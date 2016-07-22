@@ -2,10 +2,14 @@
 <head>
   <link href='https://fonts.googleapis.com/css?family=Cantarell' rel='stylesheet' type='text/css'>
   <link href='/static/main.css' rel='stylesheet' type='text/css'>
+  <link href='/static/loading.css' rel='stylesheet' type='text/css'>
 </head>
 <body>
   <div class="main">
-    <h1>Recepie generator</h1>
-    <input type="button" class="button" value="Generate a recepie NOW!">
+    <h1>Recipe generator</h1>
+    <input type="button" class="button" value="Generate a recipe NOW!" onClick="fetch_data();">
+    <img id="loading" src ="/static/ring.gif" style='display:none;'>
+    <div id="output"></div>
+    <script src="/static/main.js"></script>
   </div>
 </body>
