@@ -29,4 +29,4 @@ def fetch_recipe():
 
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0')
+    app.run(host="206.252.196.66",port=5000)
