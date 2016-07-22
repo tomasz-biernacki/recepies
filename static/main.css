@@ -47,14 +47,9 @@ h1 {
 
 .ingredients-container {
     display: flex;
-    wrap: wrap;
+    flex-flow: row wrap;
     justify-content: center;
     margin: 30px auto;
-}
-
-.description-item {
-    font-size: 1.1em;
-    margin-bottom: 10px;
 }
 
 .ingredients-item {
@@ -62,5 +57,10 @@ h1 {
     color: #222;
     padding: 10px;
     border-radius: 50px;
-    margin: 20px;
+    margin: 5px;
+}
+
+.description-item {
+    font-size: 1.1em;
+    margin-bottom: 10px;
 }
