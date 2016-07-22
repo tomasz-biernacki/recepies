@@ -5,8 +5,10 @@
 </head>
 <body>
   <div class="main">
-    <h1>Recipe generator</h1>
-    <input type="button" class="button" value="Generate a recipe NOW!" onClick="fetch_data();">
+    <h1>Skynet Cookbook</h1>
+    <div class="button" onClick="fetch_data();">
+      <span>Generate a recipe <b><u>NOW!</u></b></span>
+    </div>
     <img id="loading" src ="/static/ring.gif" style='display:none;'>
     <div id="output">
       <div id="ingredients" class="ingredients-container"></div>
