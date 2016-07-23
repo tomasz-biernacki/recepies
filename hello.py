@@ -37,8 +37,6 @@ def modify_output_recipie(nn_output):
         if steps == True:
             descriptions.append(l)
 
-    print ingredients
-    print descriptions
     return jsonify(ingredients=ingredients,
                    descriptions=descriptions)
 
