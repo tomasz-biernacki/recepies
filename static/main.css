@@ -27,6 +27,13 @@ h1 {
     margin-top: 20px;
 }
 
+#buttons {
+    display: flex;
+    direction: row;
+    justify-content: space-around;
+
+}
+
 .button {
     background-color: #4CAF50;
     border: none;
@@ -37,7 +44,8 @@ h1 {
     display: inline-block;
     font-size: 1.5em;
     border-radius: 10px;
-    margin: auto auto;
+    width: 300px;
+    margin-right: 10px;
     cursor: pointer; cursor: hand;
 }
 

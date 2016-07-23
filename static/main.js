@@ -29,7 +29,8 @@ function build_recipe (data) {
   build_description(descriptions);
 }
 
-function fetch_data () {
+
+function fetch() {
   outputDiv.style.display = 'none';
   loadingDiv.style.display = 'block';
 
@@ -48,6 +49,18 @@ function fetch_data () {
         build_recipe(json);
     }
   };
+
+  return xhttp;
+}
+
+function fetch_data () {
+  var xhttp = fetch();
   xhttp.open("GET", "/fetch", true);
+  xhttp.send();
+}
+
+function fetch_example () {
+  var xhttp = fetch();
+  xhttp.open("GET", "/fetch-example", true);
   xhttp.send();
 }

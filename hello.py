@@ -14,6 +14,12 @@ def read_rand_file():
         content = content_file.read()
     return content
 
+def read_example_file():
+    content = ""
+    with open('samples/example', 'r') as content_file:
+        content = content_file.read()
+    return content
+
 def modify_output_recipie(nn_output):
     descriptions = []
     ingredients = []
@@ -49,6 +55,14 @@ def fetch_recipe():
     time.sleep(1)
     try:
         return modify_output_recipie(read_rand_file())
+    except Exception as e:
+        return jsonify(error=str(e))
+
+@app.route('/fetch-example')
+def fetch_example():
+    time.sleep(1)
+    try:
+        return modify_output_recipie(read_example_file())
     except Exception as e:
         return jsonify(error=str(e))
 
