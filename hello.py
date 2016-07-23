@@ -11,10 +11,18 @@ fake_descriptions = ["Place the zucchini, bell pepper, and pineapple in a mixing
 description = []
 ingredients = []
 
+def modify_output_recipie(nn_output):
+    recipie = nn_output.split('\n',2)[2]
+    recipie = recipie.split('<!PRZEPIS>')
+    raw_ingredients = recipie[0].split(',')
+    raw_description = recipie[1]
+    description.append(raw_description)
+    ingredients.extend(raw_ingredients)
+    
 def run_recipe_generator():
-    bashCommand = "run_script command"
+    bashCommand = "bash command"
     output = subprocess.check_output(['bash','-c', bashCommand])
-    description.append(output)
+    modify_output_recipie(output)
 
 @app.route('/')
 def hello():
