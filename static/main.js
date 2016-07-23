@@ -38,7 +38,10 @@ function fetch_data () {
     if (xhttp.readyState == 4 && xhttp.status == 200) {
       loadingDiv.style.display = 'none';
       outputDiv.style.display = 'block';
-      build_recipe(JSON.parse(xhttp.responseText));
+      if(xhttp.responseText.error)
+        alert(xhttp.responseText.error)
+      else
+        build_recipe(JSON.parse(xhttp.responseText));
     }
   };
   xhttp.open("GET", "/fetch", true);

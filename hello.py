@@ -15,12 +15,14 @@ def read_rand_file():
     return content
 
 def modify_output_recipie(nn_output):
-    description = []
+    descriptions = []
     ingredients = []
     splitted = nn_output.split('\n')
     ing = False
     steps = False
     for l in splitted:
+        if l == "" or l == "\n:":
+            continue
         if l == "<!SKLADNIKI>:":
             ing = True
             continue
@@ -33,9 +35,12 @@ def modify_output_recipie(nn_output):
         if ing == True:
             ingredients.append(l)
         if steps == True:
-            description.append(l)
+            descriptions.append(l)
+
+    print ingredients
+    print descriptions
     return jsonify(ingredients=ingredients,
-                   descriptions=description)
+                   descriptions=descriptions)
 
 @app.route('/')
 def hello():
@@ -44,7 +49,10 @@ def hello():
 @app.route('/fetch')
 def fetch_recipe():
     time.sleep(1)
-    return modify_output_recipie(read_rand_file())
+    try:
+        return modify_output_recipie(read_rand_file())
+    except Exception as e:
+        return jsonify(error=str(e))
 
 if __name__ == "__main__":
     app.run()
